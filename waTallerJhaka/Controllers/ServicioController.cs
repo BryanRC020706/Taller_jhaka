@@ -1,38 +1,38 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using waTallerJhaka.Models;
-using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 using System.Text;
+using waTallerJhaka.Models;
 
 namespace waTallerJhaka.Controllers
 {
-    public class ClienteController : Controller
+    public class ServicioController : Controller
     {
         Uri dir_ubicacion = new Uri("https://localhost:7110/api");
         private readonly HttpClient httpClient;
 
-        public ClienteController()
+        public ServicioController()
         {
             httpClient = new HttpClient();
             httpClient.BaseAddress = dir_ubicacion;
         }
 
-        public List<Cliente> listarClientes()
+        public List<Servicio> listarServicios()
         {
-            List<Cliente> clientes = new List<Cliente>();
-            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress +"/Cliente/listarClientes").Result;
+            List<Servicio> servicios = new List<Servicio>();
+            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress + "/Servicio/listarServicios").Result;
             var data = response.Content.ReadAsStringAsync().Result;
-            clientes = JsonConvert.DeserializeObject<List<Cliente>>(data);
-            return clientes;
+            servicios = JsonConvert.DeserializeObject<List<Servicio>>(data);
+            return servicios;
         }
 
         [HttpGet]
-        public IActionResult nuevoCliente()
+        public IActionResult nuevoServicio()
         {
-            return View(new ClienteO());
+            return View(new Servicio());
         }
         [HttpPost]
-        public async Task<IActionResult> nuevoCliente(ClienteO obj)
+        public async Task<IActionResult> nuevoServicio(Servicio obj)
         {
             if (!ModelState.IsValid)
             {
@@ -41,54 +41,58 @@ namespace waTallerJhaka.Controllers
             var json = JsonConvert.SerializeObject(obj);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var responseC = await
-            httpClient.PostAsync("/api/Cliente/nuevoCliente", content);
+            httpClient.PostAsync("/api/Servicio/nuevoServicio", content);
             if (responseC.IsSuccessStatusCode)
             {
-                ViewBag.mensaje = "Cliente registrado correctamente..!!!";
+                ViewBag.mensaje = "Servicio registrado correctamente..!!!";
             }
             return View(obj);
         }
 
+
         [HttpGet]
-        public IActionResult editarCliente(int id)
+        public IActionResult editarServicio(int id)
         {
-            ClienteO cliente = new ClienteO();
-            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress + "/Cliente/buscarCliente/" + id).Result;
+            Servicio servicio = new Servicio();
+            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress + "/Servicio/buscarServicio/" + id).Result;
             if (response.IsSuccessStatusCode)
             {
                 var data = response.Content.ReadAsStringAsync().Result;
-                cliente = JsonConvert.DeserializeObject<ClienteO>(data);
+                servicio = JsonConvert.DeserializeObject<Servicio>(data);
             }
-            return View(cliente);
+            return View(servicio);
         }
 
         [HttpPost]
-        public async Task<IActionResult> editarCliente(ClienteO obj)
+        public async Task<IActionResult> editarServicio(Servicio obj)
         {
+   
             if (!ModelState.IsValid)
             {
                 return View(obj);
             }
             var json = JsonConvert.SerializeObject(obj);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await httpClient.PutAsync("/api/Cliente/actualizarCliente", content);
+            var response = await httpClient.PutAsync("/api/Servicio/actualizarServicio", content);
 
             if (response.IsSuccessStatusCode)
             {
-                ViewBag.mensaje = "Cliente actualizado correctamente..!!!";
-                return RedirectToAction("listadoClientes");
+                ViewBag.mensaje = "Servicio actualizado correctamente..!!!";
+                return RedirectToAction("listadoServicios");
             }
             else
             {
-                ViewBag.mensaje = "Error al actualizar el cliente";
+                ViewBag.mensaje = "Error al actualizar el servicio";
                 return View(obj);
             }
         }
 
-        public IActionResult listadoClientes() { 
-            return View(listarClientes());
-        }
 
+
+        public IActionResult listadoServicios()
+        {
+            return View(listarServicios());
+        }
         public IActionResult Index()
         {
             return View();

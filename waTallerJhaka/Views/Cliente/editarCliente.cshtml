@@ -1,0 +1,66 @@
+﻿@model waTallerJhaka.Models.ClienteO
+
+@{
+    ViewData["Title"] = "editarCliente";
+    Layout = "~/Views/Shared/LayoutPrincipal.cshtml";
+}
+<hr />
+
+<div class="form-elements-wrapper justify-content-center">
+    <div class="row">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card-style mb-30">
+                    <form asp-action="editarCliente">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <h1 class="text-center">EDITAR CLIENTE </h1>
+                        <br />
+                        <div class="input-style-1">
+                            <label asp-for="ide_cli" class="control-label"></label>
+                            <input asp-for="ide_cli" readonly="readonly" />
+                            <span asp-validation-for="ide_cli" class="text-danger"></span>
+                        </div>
+                        <div class="input-style-1">
+                            <label asp-for="nom_cli" class="control-label"></label>
+                            <input asp-for="nom_cli" placeholder="@Html.DisplayNameFor(m => m.nom_cli)" />
+                            <span asp-validation-for="nom_cli" class="text-danger"></span>
+                        </div>
+
+                        <div class="input-style-1">
+                            <label asp-for="ape_cli" class="control-label"></label>
+                            <input asp-for="ape_cli" placeholder="@Html.DisplayNameFor(m => m.ape_cli)" />
+                            <span asp-validation-for="ape_cli" class="text-danger"></span>
+                        </div>
+
+                        <div class="input-style-1">
+                            <label asp-for="dni_cli" class="control-label"></label>
+                            <input asp-for="dni_cli" placeholder="@Html.DisplayNameFor(m => m.dni_cli)" />
+                            <span asp-validation-for="dni_cli" class="text-danger"></span>
+                        </div>
+
+                        <div class="input-style-1">
+                            <label asp-for="tel_cli" class="control-label"></label>
+                            <input asp-for="tel_cli" placeholder="@Html.DisplayNameFor(m => m.tel_cli)" />
+                            <span asp-validation-for="tel_cli" class="text-danger"></span>
+                        </div>
+
+                        <div class="input-style-1">
+                            <label asp-for="dir_cli" class="control-label"></label>
+                            <input asp-for="dir_cli" placeholder="@Html.DisplayNameFor(m => m.dir_cli)" />
+                            <span asp-validation-for="dir_cli" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="GUARDAR" class="btn btn-primary mx-auto d-block" />
+                        </div>
+                    </form>
+
+                    <br />
+
+                    <div class="row justify-content-center">
+                        <a asp-action="listadoClientes" class="main-btn active-btn rounded-full btn-hover">Regresar al Listado</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

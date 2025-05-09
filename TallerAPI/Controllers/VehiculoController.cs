@@ -8,7 +8,7 @@ namespace TallerAPI.Controllers
     [ApiController]
     public class VehiculoController : ControllerBase
     {
-        [HttpGet("listarVehiculo")]
+        [HttpGet("listarVehiculos")]
         public async Task<ActionResult<List<Vehiculo>>> listarVehiculos()
         {
             var lista = await Task.Run(() => new VehiculoDAO().listadoVehiculos());
@@ -16,16 +16,16 @@ namespace TallerAPI.Controllers
         }
 
         [HttpPost("nuevoVehiculo")]
-        public async Task<ActionResult<string>> nuevoVehiculo(VehiculoO objVO)
+        public async Task<ActionResult<string>> nuevoVehiculo(VehiculoO obj)
         {
-            var resultado = await Task.Run(() => new VehiculoDAO().nuevoVehiculo(objVO));
+            var resultado = await Task.Run(() => new VehiculoDAO().nuevoVehiculo(obj));
             return Ok(resultado);
         }
 
         [HttpPut("actualizarVehiculo")]
-        public async Task<ActionResult<string>> actualizarVehiculo(VehiculoO objVO)
+        public async Task<ActionResult<string>> actualizarVehiculo(VehiculoO obj)
         {
-            var resultado = await Task.Run(() => new VehiculoDAO().modificaVehiculo(objVO));
+            var resultado = await Task.Run(() => new VehiculoDAO().modificaVehiculo(obj));
             return Ok(resultado);
         }
 

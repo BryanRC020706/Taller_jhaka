@@ -273,6 +273,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.min.js"
     },
     {
+      "Id": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\assets\\js\\datatables.js",
+      "PackagePath": "staticwebassets\\assets\\js\\datatables.js"
+    },
+    {
       "Id": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\assets\\js\\dynamic-pie-chart.js",
       "PackagePath": "staticwebassets\\assets\\js\\dynamic-pie-chart.js"
     },

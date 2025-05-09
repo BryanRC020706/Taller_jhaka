@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\TALLER_JHAKA_API.props" />
-</Project>

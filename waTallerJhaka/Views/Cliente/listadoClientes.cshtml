@@ -4,57 +4,52 @@
     ViewData["Title"] = "listadoClientes";
     Layout = "~/Views/Shared/LayoutPrincipal.cshtml";
 }
-
-<h1>listadoClientes</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ide_cli)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nom_cli)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.dni_cli)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tel_cli)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.dir_cli)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ide_cli)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nom_cli)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.dni_cli)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.tel_cli)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.dir_cli)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<hr />
+<div class="tables-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-style mb-30">
+                <h6 class="mb-10">Lista de Clientes</h6>
+                <div class="table-wrapper table-responsive">
+                    <table id="tabla" class="table">
+                        <thead>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.ide_cli)</th>
+                                <th>@Html.DisplayNameFor(model => model.nom_cli)</th>
+                                <th>@Html.DisplayNameFor(model => model.dni_cli)</th>
+                                <th>@Html.DisplayNameFor(model => model.tel_cli)</th>
+                                <th>@Html.DisplayNameFor(model => model.dir_cli)</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.ide_cli)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.nom_cli)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.dni_cli)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.tel_cli)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.dir_cli)</td>
+                                    <td>
+                                        @Html.ActionLink("Editar", "editarCliente", new { id = item.ide_cli }) |
+                                        @Html.ActionLink("Eliminar", "Delete", new { id = item.ide_cli })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Selector de filas por página -->
+                <div class="d-flex justify-content-between">
+                    <select id="rowsPerPage" class="form-select w-auto mb-3">
+                        <option value="5">5 por página</option>
+                        <option value="10">10 por página</option>
+                        <option value="20">20 por página</option>
+                    </select>
+                    <div id="pagination" class="d-flex justify-content-center mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

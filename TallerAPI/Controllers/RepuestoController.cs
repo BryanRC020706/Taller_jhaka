@@ -33,7 +33,7 @@ namespace TallerAPI.Controllers
         [HttpGet("buscarRepuesto/{id}")]
         public async Task<ActionResult<Repuesto>> buscarRepuesto(int id)
         {
-            var lista = await Task.Run(() => new ClienteDAO().buscarCliente(id));
+            var lista = await Task.Run(() => new RepuestoDAO().buscarRepuesto(id));
             return Ok(lista);
         }
     }

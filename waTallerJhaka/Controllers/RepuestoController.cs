@@ -1,38 +1,38 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using waTallerJhaka.Models;
 using Newtonsoft.Json;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Text;
+using waTallerJhaka.Models;
 
 namespace waTallerJhaka.Controllers
 {
-    public class ClienteController : Controller
+    public class RepuestoController : Controller
     {
         Uri dir_ubicacion = new Uri("https://localhost:7110/api");
         private readonly HttpClient httpClient;
 
-        public ClienteController()
+        public RepuestoController()
         {
             httpClient = new HttpClient();
             httpClient.BaseAddress = dir_ubicacion;
         }
 
-        public List<Cliente> listarClientes()
+        public List<Repuesto> listarRepuestos()
         {
-            List<Cliente> clientes = new List<Cliente>();
-            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress +"/Cliente/listarClientes").Result;
+            List<Repuesto> repuestos = new List<Repuesto>();
+            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress + "/Repuesto/listarRespuestos").Result;
             var data = response.Content.ReadAsStringAsync().Result;
-            clientes = JsonConvert.DeserializeObject<List<Cliente>>(data);
-            return clientes;
+            repuestos = JsonConvert.DeserializeObject<List<Repuesto>>(data);
+            return repuestos;
         }
+        
 
         [HttpGet]
-        public IActionResult nuevoCliente()
+        public IActionResult nuevoRepuesto()
         {
-            return View(new ClienteO());
+            return View(new Repuesto());
         }
         [HttpPost]
-        public async Task<IActionResult> nuevoCliente(ClienteO obj)
+        public async Task<IActionResult> nuevoRepuesto(Repuesto obj)
         {
             if (!ModelState.IsValid)
             {
@@ -41,29 +41,29 @@ namespace waTallerJhaka.Controllers
             var json = JsonConvert.SerializeObject(obj);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var responseC = await
-            httpClient.PostAsync("/api/Cliente/nuevoCliente", content);
+            httpClient.PostAsync("/api/Repuesto/nuevoRepuesto", content);
             if (responseC.IsSuccessStatusCode)
             {
-                ViewBag.mensaje = "Cliente registrado correctamente..!!!";
+                ViewBag.mensaje = "Repuesto registrado correctamente..!!!";
             }
             return View(obj);
         }
 
         [HttpGet]
-        public IActionResult editarCliente(int id)
+        public IActionResult editarRepuesto(int id)
         {
-            ClienteO cliente = new ClienteO();
-            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress + "/Cliente/buscarCliente/" + id).Result;
+            Repuesto repuesto = new Repuesto();
+            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress + "/Repuesto/buscarRepuesto/" + id).Result;
             if (response.IsSuccessStatusCode)
             {
                 var data = response.Content.ReadAsStringAsync().Result;
-                cliente = JsonConvert.DeserializeObject<ClienteO>(data);
+                repuesto = JsonConvert.DeserializeObject<Repuesto>(data);
             }
-            return View(cliente);
+            return View(repuesto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> editarCliente(ClienteO obj)
+        public async Task<IActionResult> editarRepuesto(Repuesto obj)
         {
             if (!ModelState.IsValid)
             {
@@ -71,22 +71,23 @@ namespace waTallerJhaka.Controllers
             }
             var json = JsonConvert.SerializeObject(obj);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await httpClient.PutAsync("/api/Cliente/actualizarCliente", content);
+            var response = await httpClient.PutAsync("/api/Repuesto/actualizarRepuesto", content);
 
             if (response.IsSuccessStatusCode)
             {
-                ViewBag.mensaje = "Cliente actualizado correctamente..!!!";
-                return RedirectToAction("listadoClientes");
+                ViewBag.mensaje = "Repuesto actualizado correctamente..!!!";
+                return RedirectToAction("listadoRepuesto");
             }
             else
             {
-                ViewBag.mensaje = "Error al actualizar el cliente";
+                ViewBag.mensaje = "Error al actualizar el repuesto";
                 return View(obj);
             }
         }
 
-        public IActionResult listadoClientes() { 
-            return View(listarClientes());
+        public IActionResult listadoRepuesto()
+        {
+            return View(listarRepuestos());
         }
 
         public IActionResult Index()

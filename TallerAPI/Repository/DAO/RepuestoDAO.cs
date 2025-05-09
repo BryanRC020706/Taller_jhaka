@@ -30,8 +30,9 @@ namespace TallerAPI.Repository.DAO
                 {
                     ide_rep = int.Parse(dr[0].ToString()),
                     nom_rep = dr[1].ToString(),
-                    pre_rep = double.Parse(dr[2].ToString()),
-                    sto_rep = int.Parse(dr[3].ToString()),
+                    sto_rep = int.Parse(dr[2].ToString()),
+                    pre_rep = double.Parse(dr[3].ToString())
+                    
                 };
             }
             cn.Close();
@@ -42,17 +43,18 @@ namespace TallerAPI.Repository.DAO
         {
             List<Repuesto> aRepuesto = new List<Repuesto>();
             SqlConnection cn = new SqlConnection(cadena);
-            SqlCommand cmd = new SqlCommand("SP_BUSCARREPUESTOXID", cn);
+            SqlCommand cmd = new SqlCommand("SP_LISTADOREPUESTO", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
+            while (dr.Read())
             {
                 aRepuesto.Add(new Repuesto() {
                     ide_rep = int.Parse(dr[0].ToString()),
                     nom_rep = dr[1].ToString(),
-                    pre_rep = double.Parse(dr[2].ToString()),
-                    sto_rep = int.Parse(dr[3].ToString())
+                    sto_rep = int.Parse(dr[2].ToString()),
+                    pre_rep = double.Parse(dr[3].ToString())
+                    
                 });             
             }
             cn.Close();
@@ -67,7 +69,7 @@ namespace TallerAPI.Repository.DAO
             cn.Open();
             try
             {
-               SqlCommand cmd = new SqlCommand("SP_MERGECLIENTE", cn);
+               SqlCommand cmd = new SqlCommand("SP_MERGEREPUESTO", cn);
                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IDE", obj.ide_rep);
                 cmd.Parameters.AddWithValue("@NOM", obj.nom_rep);
@@ -91,7 +93,7 @@ namespace TallerAPI.Repository.DAO
             cn.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand("SP_MERGECLIENTE", cn);
+                SqlCommand cmd = new SqlCommand("SP_MERGEREPUESTO", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IDE", obj.ide_rep);
                 cmd.Parameters.AddWithValue("@NOM", obj.nom_rep);

@@ -26,8 +26,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\waTallerJhaka
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Cliente/editarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxlZGl0YXJDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Cliente/listadoClientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxsaXN0YWRvQ2xpZW50ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Cliente/nuevoCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxudWV2b0NsaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Home/Index.cshtml]
@@ -36,6 +44,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Repuesto/editarRepuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwdWVzdG9cZWRpdGFyUmVwdWVzdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Repuesto/listadoRepuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwdWVzdG9cbGlzdGFkb1JlcHVlc3RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Repuesto/nuevoRepuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwdWVzdG9cbnVldm9SZXB1ZXN0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Servicio/editarServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cZWRpdGFyU2VydmljaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Servicio/listadoServicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cbGlzdGFkb1NlcnZpY2lvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Servicio/nuevoServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cbnVldm9TZXJ2aWNpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Shared/Error.cshtml]
@@ -48,6 +80,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Vehiculo/editarVehiculo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9cZWRpdGFyVmVoaWN1bG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Vehiculo/listadoVehiculos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9cbGlzdGFkb1ZlaGljdWxvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Vehiculo/nuevoVehiculo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9cbnVldm9WZWhpY3Vsby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/_ViewImports.cshtml]

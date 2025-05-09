@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X2UWUooEhoTsCrqUQvOnM+6xQburG9EKDlZFLv/RHC8=",
+  "Hash": "Eqc9IbOQ6DBnF7auBrs2diXHLjw3A01amJGyqerJMG8=",
   "Source": "waTallerJhaka",
   "BasePath": "_content/waTallerJhaka",
   "Mode": "Default",
@@ -1326,6 +1326,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\Chart.min.js"
+    },
+    {
+      "Identity": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\assets\\js\\datatables.js",
+      "SourceId": "waTallerJhaka",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\",
+      "BasePath": "_content/waTallerJhaka",
+      "RelativePath": "assets/js/datatables.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\datatables.js"
     },
     {
       "Identity": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\assets\\js\\dynamic-pie-chart.js",

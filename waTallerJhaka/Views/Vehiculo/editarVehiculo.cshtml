@@ -1,0 +1,60 @@
+﻿@model waTallerJhaka.Models.VehiculoO
+
+@{
+    ViewData["Title"] = "editarVehiculo";
+    Layout = "~/Views/Shared/LayoutPrincipal.cshtml";
+}
+
+
+<hr />
+
+
+<div class="form-elements-wrapper">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card-style mb-30">
+
+                <form asp-action="editarVehiculo">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <h1 class="text-center">EDITAR VEHICULO</h1>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="ide_veh" class="control-label"></label>
+                        <input asp-for="ide_veh" class="form-control" readonly="readonly" />
+                        <span asp-validation-for="ide_veh" class="text-danger"></span>
+                    </div>
+                    <div class="input-style-1">
+                        <label asp-for="mar_veh" class="control-label"></label>
+                        <input asp-for="mar_veh" placeholder="@Html.DisplayNameFor(m => m.mar_veh)" />
+                        <span asp-validation-for="mar_veh" class="text-danger"></span>
+                    </div>
+                    <div class="input-style-1">
+                        <label asp-for="mod_veh" class="control-label"></label>
+                        <input asp-for="mod_veh" placeholder="@Html.DisplayNameFor(m => m.mod_veh)" />
+                        <span asp-validation-for="mod_veh" class="text-danger"></span>
+                    </div>
+                    <div class="input-style-1">
+                        <label asp-for="pla_veh" class="control-label"></label>
+                        <input asp-for="pla_veh" placeholder="@Html.DisplayNameFor(m => m.pla_veh)" />
+                        <span asp-validation-for="pla_veh" class="text-danger"></span>
+                    </div>
+                    <div class="select-style-1">
+                        <div class="select-position">
+                            <label asp-for="ide_cli" class="control-label"></label>
+                            @Html.DropDownListFor(Model => Model.ide_cli, (SelectList)ViewBag.clientes, "Seleccione Cliente", new { @class = "select-form" })
+                            <span asp-validation-for="ide_cli" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="GUARDAR" class="btn btn-primary mx-auto d-block" />
+                    </div>
+                </form>
+                <br />
+
+                <div class="row justify-content-center">
+                    <a asp-action="listadoVehiculos" class="main-btn active-btn rounded-full btn-hover">Regresar al Listado</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

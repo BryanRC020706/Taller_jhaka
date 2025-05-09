@@ -16,16 +16,16 @@ namespace TallerAPI.Controllers
             }
 
             [HttpPost("nuevoCliente")]
-            public async Task<ActionResult<string>> nuevoCliente(ClienteO objC)
+            public async Task<ActionResult<string>> nuevoCliente(ClienteO obj)
             {
-                var resultado = await Task.Run(() => new ClienteDAO().nuevoCliente(objC));
+                var resultado = await Task.Run(() => new ClienteDAO().nuevoCliente(obj));
                 return Ok(resultado);
             }
 
             [HttpPut("actualizarCliente")]
-            public async Task<ActionResult<string>> actualizarCliente(ClienteO objC)
+            public async Task<ActionResult<string>> actualizarCliente(ClienteO obj)
             {
-                var resultado = await Task.Run(() => new ClienteDAO().modificaCliente(objC));
+                var resultado = await Task.Run(() => new ClienteDAO().modificaCliente(obj));
                 return Ok(resultado);
             }
 

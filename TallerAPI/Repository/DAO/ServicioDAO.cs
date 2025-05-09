@@ -24,7 +24,7 @@ namespace TallerAPI.Repository.DAO
             cmd.Parameters.AddWithValue("@IDE", id);
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
+            if (dr.Read())
             {
                  resultado   =new Servicio()
                 {

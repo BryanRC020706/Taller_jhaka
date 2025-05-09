@@ -50,11 +50,11 @@ namespace TallerAPI.Repository.DAO
             {
                 aVehiculos.Add(new Vehiculo()
                 {
-                    ide_veh = int.Parse(dr[0].ToString()),
-                    nom_cli = dr[1].ToString(),
-                    mar_veh = dr[2].ToString(),
-                    mod_veh = dr[3].ToString(),
-                    pla_veh = dr[4].ToString()
+                    ide_veh = int.Parse(dr[0].ToString()),        
+                    mar_veh = dr[1].ToString(),
+                    mod_veh = dr[2].ToString(),
+                    pla_veh = dr[3].ToString(),
+                    nom_cli = dr[4].ToString()
                 });
             }
             cn.Close();

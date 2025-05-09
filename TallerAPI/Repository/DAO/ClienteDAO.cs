@@ -14,9 +14,9 @@ namespace TallerAPI.Repository.DAO
             .Build().GetConnectionString("cn");
         }
 
-        public Cliente buscarCliente(int id)
+        public ClienteO buscarCliente(int id)
         {
-            Cliente aClientes = null;
+            ClienteO aClientes = null;
             SqlConnection cn = new SqlConnection(cadena);
             SqlCommand cmd = new SqlCommand("SP_BUSCARCLIENTEXID", cn);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -25,7 +25,7 @@ namespace TallerAPI.Repository.DAO
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                aClientes = new Cliente()
+                aClientes = new ClienteO()
                 {
                     ide_cli = int.Parse(dr[0].ToString()),
                     nom_cli = dr[1].ToString(),
@@ -62,7 +62,7 @@ namespace TallerAPI.Repository.DAO
             return aClientes;
         }
 
-        public string modificaCliente(Cliente obj)
+        public string modificaCliente(ClienteO obj)
         {
             string mensaje = "";
             SqlConnection cn = new SqlConnection(cadena);
@@ -88,7 +88,7 @@ namespace TallerAPI.Repository.DAO
             return mensaje;
         }
 
-        public string nuevoCliente(Cliente obj)
+        public string nuevoCliente(ClienteO obj)
         {
             string mensaje = "";
             SqlConnection cn = new SqlConnection(cadena);

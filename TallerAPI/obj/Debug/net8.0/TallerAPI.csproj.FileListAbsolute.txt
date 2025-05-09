@@ -36,3 +36,42 @@ C:\Users\USUARIO\source\repos\Taller_JHAKA_S.A.C\TallerAPI\bin\Debug\net8.0\runt
 C:\Users\USUARIO\source\repos\Taller_JHAKA_S.A.C\TallerAPI\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
 C:\Users\USUARIO\source\repos\Taller_JHAKA_S.A.C\TallerAPI\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\USUARIO\source\repos\Taller_JHAKA_S.A.C\TallerAPI\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\appsettings.Development.json
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\appsettings.json
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\TallerAPI.exe
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\TallerAPI.deps.json
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\TallerAPI.runtimeconfig.json
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\TallerAPI.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\TallerAPI.pdb
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\System.Data.SqlClient.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.csproj.AssemblyReference.cache
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.GeneratedMSBuildEditorConfig.editorconfig
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.AssemblyInfoInputs.cache
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.AssemblyInfo.cs
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.csproj.CoreCompileInputs.cache
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.MvcApplicationPartsAssemblyInfo.cs
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.MvcApplicationPartsAssemblyInfo.cache
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.sourcelink.json
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\staticwebassets.build.json
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\staticwebassets.development.json
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\staticwebassets\msbuild.TallerAPI.Microsoft.AspNetCore.StaticWebAssets.props
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.TallerAPI.props
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TallerAPI.props
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TallerAPI.props
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\staticwebassets.pack.json
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\scopedcss\bundle\TallerAPI.styles.css
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.csproj.Up2Date
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\refint\TallerAPI.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.pdb
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\TallerAPI.genruntimeconfig.cache
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\TallerAPI\obj\Debug\net8.0\ref\TallerAPI.dll

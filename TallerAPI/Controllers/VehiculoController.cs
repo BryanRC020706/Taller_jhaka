@@ -15,14 +15,6 @@ namespace TallerAPI.Controllers
             return Ok(lista);
         }
 
-        [HttpGet("listadoClientes")]
-        public async Task<ActionResult<List<Cliente>>> listadoClientes()
-        {
-            var lista = await Task.Run(() =>
-            new VehiculoDAO().listadoClientes());
-            return Ok(lista);
-        }
-
         [HttpPost("nuevoVehiculo")]
         public async Task<ActionResult<string>> nuevoVehiculo(VehiculoO objVO)
         {
@@ -38,7 +30,7 @@ namespace TallerAPI.Controllers
         }
 
         [HttpGet("buscarVehiculo/{id}")]
-        public async Task<ActionResult<List<Vehiculo>>> buscarVehiculo(int id)
+        public async Task<ActionResult<VehiculoO>> buscarVehiculo(int id)
         {
             var lista = await Task.Run(() => new VehiculoDAO().buscarVehiculo(id));
             return Ok(lista);

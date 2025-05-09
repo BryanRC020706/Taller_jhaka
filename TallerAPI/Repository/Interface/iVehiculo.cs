@@ -5,8 +5,7 @@ namespace TallerAPI.Repository.Interface
     public interface iVehiculo
     {
         IEnumerable<Vehiculo> listadoVehiculos();
-        IEnumerable<Cliente> listadoClientes();
-        Vehiculo buscarVehiculo(int id);
+        VehiculoO buscarVehiculo(int id);
         string nuevoVehiculo(VehiculoO obj);
         string modificaVehiculo(VehiculoO obj);
     }

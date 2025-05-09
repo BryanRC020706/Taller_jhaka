@@ -8,8 +8,6 @@ namespace TallerAPI.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        
-        
             [HttpGet("listarClientes")]
             public async Task<ActionResult<List<Cliente>>> listarClientes()
             {
@@ -18,25 +16,26 @@ namespace TallerAPI.Controllers
             }
 
             [HttpPost("nuevoCliente")]
-            public async Task<ActionResult<string>> nuevoCliente(Cliente objC)
+            public async Task<ActionResult<string>> nuevoCliente(ClienteO objC)
             {
                 var resultado = await Task.Run(() => new ClienteDAO().nuevoCliente(objC));
                 return Ok(resultado);
             }
 
             [HttpPut("actualizarCliente")]
-            public async Task<ActionResult<string>> actualizarCliente(Cliente objC)
+            public async Task<ActionResult<string>> actualizarCliente(ClienteO objC)
             {
                 var resultado = await Task.Run(() => new ClienteDAO().modificaCliente(objC));
                 return Ok(resultado);
             }
 
             [HttpGet("buscarCliente/{id}")]
-            public async Task<ActionResult<List<Cliente>>> buscarCliente(int id)
+            public async Task<ActionResult<ClienteO>> buscarCliente(int id)
             {
                 var lista = await Task.Run(() => new ClienteDAO().buscarCliente(id));
                 return Ok(lista);
             }
+
 
     }
 

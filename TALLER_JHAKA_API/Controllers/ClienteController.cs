@@ -1,0 +1,43 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using TALLER_JHAKA_API.Models;
+using TALLER_JHAKA_API.Repository.DAO;
+
+namespace TALLER_JHAKA_API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ClienteController : ControllerBase
+    {
+            [HttpGet("listarClientes")]
+            public async Task<ActionResult<List<Cliente>>> listarClientes()
+            {
+                var lista = await Task.Run(() => new ClienteDAO().listadoClientes());
+                return Ok(lista);
+            }
+
+            [HttpPost("nuevoCliente")]
+            public async Task<ActionResult<string>> nuevoCliente(ClienteO objC)
+            {
+                var resultado = await Task.Run(() => new ClienteDAO().nuevoCliente(objC));
+                return Ok(resultado);
+            }
+
+            [HttpPut("actualizarCliente")]
+            public async Task<ActionResult<string>> actualizarCliente(ClienteO objC)
+            {
+                var resultado = await Task.Run(() => new ClienteDAO().modificaCliente(objC));
+                return Ok(resultado);
+            }
+
+            [HttpGet("buscarCliente/{id}")]
+            public async Task<ActionResult<ClienteO>> buscarCliente(int id)
+            {
+                var lista = await Task.Run(() => new ClienteDAO().buscarCliente(id));
+                return Ok(lista);
+            }
+
+
+    }
+
+    
+}

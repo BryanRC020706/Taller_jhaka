@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
+    <title>PlainAdmin Demo | Bootstrap 5 Admin Template</title>
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/css/lineicons.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="~/assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <aside class="sidebar-nav-wrapper">
+        <div class="navbar-logo">
+            <a href="index.html">
+                <b style="font-size: 50px;
+                   font-family: sans-serif;">JHAKA</b>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <span class="divider"><hr /></span>
+                <li class="nav-item nav-item-has-children">
+                    <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_1" aria-controls="ddmenu_1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text">Clientes </span>
+                    </a>
+                    <ul id="ddmenu_1" class="collapse dropdown-nav">
+                        <li>
+                            <a href="@Url.ActionLink("listadoClientes","Cliente")"> Listado </a>
+                        </li>
+                        <li>
+                            <a href="@Url.ActionLink("listadoClientes","Cliente")"> Registrar </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-item-has-children">
+                    <a href="#1" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_2" aria-controls="ddmenu_2" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text">Vehiculos </span>
+                    </a>
+                    <ul id="ddmenu_2" class="collapse dropdown-nav">
+                        <li>
+                            <a href="alerts.html"> Listado </a>
+                        </li>
+                        <li>
+                            <a href="buttons.html"> Registrar </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-item-has-children">
+                    <a href="#2" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_3" aria-controls="ddmenu_3" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text">Repuestos </span>
+                    </a>
+                    <ul id="ddmenu_3" class="collapse dropdown-nav">
+                        <li>
+                            <a href="alerts.html"> Listado </a>
+                        </li>
+                        <li>
+                            <a href="buttons.html"> Registrar </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                    <a href="#3" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_4" aria-controls="ddmenu_4" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text">Servicios </span>
+                    </a>
+                    <ul id="ddmenu_4" class="collapse dropdown-nav">
+                        <li>
+                            <a href="alerts.html"> Listado </a>
+                        </li>
+                        <li>
+                            <a href="buttons.html"> Registrar </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="overlay"></div>
+    <main class="main-wrapper">
+
+        <header class="header">
+        </header>
+        <section class="section">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 order-last order-md-first">
+                        <div class="copyright text-center text-md-start">
+                            <p class="text-sm">
+                                Designed and Developed by
+                                <b rel="nofollow" target="_blank">
+                                    Taller JHAKA
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="terms d-flex justify-content-center justify-content-md-end">
+                            <a href="#0" class="text-sm">Term & Conditions</a>
+                            <a href="#0" class="text-sm ml-15">Privacy & Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/Chart.min.js"></script>
+    <script src="~/assets/js/dynamic-pie-chart.js"></script>
+    <script src="~/assets/js/moment.min.js"></script>
+    <script src="~/assets/js/fullcalendar.js"></script>
+    <script src="~/assets/js/jvectormap.min.js"></script>
+    <script src="~/assets/js/world-merc.js"></script>
+    <script src="~/assets/js/polyfill.js"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+</html>
+
+

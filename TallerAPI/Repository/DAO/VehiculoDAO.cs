@@ -14,30 +14,9 @@ namespace TallerAPI.Repository.DAO
             .Build().GetConnectionString("cn");
         }
 
-        public IEnumerable<Cliente> listadoClientes()
+        public VehiculoO buscarVehiculo(int id)
         {
-            List<Cliente> aCliente = new List<Cliente>();
-            SqlConnection cn = new SqlConnection(cadena);
-            SqlCommand cmd = new SqlCommand("SP_LISTACLIENTES", cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cn.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                Cliente objC = new Cliente()
-                {
-                    ide_cli = int.Parse(dr[0].ToString()),
-                    nom_cli = dr[1].ToString()
-                };
-                aCliente.Add(objC);
-            }
-            cn.Close();
-            return aCliente;
-        }
-
-        public Vehiculo buscarVehiculo(int id)
-        {
-            Vehiculo aVehiculo = null;
+            VehiculoO aVehiculo = null;
             SqlConnection cn = new SqlConnection(cadena);
             SqlCommand cmd = new SqlCommand("SP_BUSCARVEHICULOXID", cn);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -46,10 +25,10 @@ namespace TallerAPI.Repository.DAO
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                aVehiculo = new Vehiculo()
+                aVehiculo = new VehiculoO()
                 {
                     ide_veh = int.Parse(dr[0].ToString()),
-                    nom_cli = dr[1].ToString(),
+                    ide_cli = int.Parse(dr[1].ToString()),
                     mar_veh = dr[2].ToString(),
                     mod_veh = dr[3].ToString(),
                     pla_veh = dr[4].ToString()

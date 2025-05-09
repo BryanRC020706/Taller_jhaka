@@ -1,0 +1,60 @@
+﻿@model IEnumerable<waTaller_Jhaka.Models.Cliente>
+
+@{
+    ViewData["Title"] = "listadoClientes";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h1>listadoClientes</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ide_cli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nom_cli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dni_cli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tel_cli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dir_cli)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ide_cli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nom_cli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dni_cli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tel_cli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dir_cli)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

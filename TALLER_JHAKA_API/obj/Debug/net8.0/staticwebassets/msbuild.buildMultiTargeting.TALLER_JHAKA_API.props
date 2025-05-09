@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TALLER_JHAKA_API.props" />
+</Project>

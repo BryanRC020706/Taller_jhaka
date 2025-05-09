@@ -1,4 +1,6 @@
-var builder = WebApplication.CreateBuilder(args);
+try
+{
+    var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
@@ -23,3 +25,11 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+    
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error crítico: {ex.Message}");
+    Console.WriteLine(ex.StackTrace);
+}

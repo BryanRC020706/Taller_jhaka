@@ -5,8 +5,8 @@ namespace TallerAPI.Repository.Interface
     public interface ICliente
     {
         IEnumerable<Cliente> listadoClientes();
-        Cliente buscarCliente(int id);
-        string nuevoCliente(Cliente obj);
-        string modificaCliente(Cliente obj);
+        ClienteO buscarCliente(int id);
+        string nuevoCliente(ClienteO obj);
+        string modificaCliente(ClienteO obj);
     }
 }

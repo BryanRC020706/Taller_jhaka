@@ -227,3 +227,5 @@ E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\waTallerJhaka\bin\Debug\net8.0\run
 E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\waTallerJhaka\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\waTallerJhaka\obj\Debug\net8.0\waTallerJhaka.csproj.AssemblyReference.cache
 E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\waTallerJhaka\obj\Debug\net8.0\waTaller.EA479E0B.Up2Date
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\waTallerJhaka\bin\Debug\net8.0\Rotativa.AspNetCore.dll
+E:\angelo\SERVICIOS WEB\PROYECTO\Taller_jhaka\waTallerJhaka\obj\Debug\net8.0\waTallerJhaka.MvcApplicationPartsAssemblyInfo.cs

@@ -7,7 +7,7 @@ namespace TallerAPI.Repository.DAO
 {
     public class RepuestoDAO : IRepuesto
     {
-        private readonly string? cadena;
+        private readonly string cadena;
         public RepuestoDAO()
         {
             cadena = new ConfigurationBuilder().AddJsonFile("appsettings.json")

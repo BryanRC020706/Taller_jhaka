@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Eqc9IbOQ6DBnF7auBrs2diXHLjw3A01amJGyqerJMG8=",
+  "Hash": "LlaMSGMvWbdzOu4Ekf1ZVbwkuXKp2k2p1lUCD7rCRvY=",
   "Source": "waTallerJhaka",
   "BasePath": "_content/waTallerJhaka",
   "Mode": "Default",
@@ -965,6 +965,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\lead\\lead-6.png"
+    },
+    {
+      "Identity": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\assets\\images\\logo.png",
+      "SourceId": "waTallerJhaka",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\",
+      "BasePath": "_content/waTallerJhaka",
+      "RelativePath": "assets/images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\logo.png"
     },
     {
       "Identity": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\assets\\images\\logo\\logo.svg",
@@ -3055,6 +3074,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\logo.png",
+      "SourceId": "waTallerJhaka",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\",
+      "BasePath": "_content/waTallerJhaka",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
     }
   ]
 }

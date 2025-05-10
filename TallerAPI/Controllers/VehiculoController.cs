@@ -15,6 +15,13 @@ namespace TallerAPI.Controllers
             return Ok(lista);
         }
 
+        [HttpGet("listarVehiculosBox")]
+        public async Task<ActionResult<List<VehiculoBox>>> listarVehiculosBox()
+        {
+            var lista = await Task.Run(() => new VehiculoDAO().listadoVehiculosBox());
+            return Ok(lista);
+        }
+
         [HttpPost("nuevoVehiculo")]
         public async Task<ActionResult<string>> nuevoVehiculo(VehiculoO obj)
         {

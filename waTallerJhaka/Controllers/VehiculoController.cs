@@ -25,7 +25,14 @@ namespace waTallerJhaka.Controllers
             return vehiculos;
         }
 
-
+        public List<VehiculoBox> listarVehiculosBOX()
+        {
+            List<VehiculoBox> vehiculos = new List<VehiculoBox>();
+            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress + "/Vehiculo/listarVehiculosBox").Result;
+            var data = response.Content.ReadAsStringAsync().Result;
+            vehiculos = JsonConvert.DeserializeObject<List<VehiculoBox>>(data);
+            return vehiculos;
+        }
 
         [HttpGet]
         public IActionResult nuevoVehiculo()
@@ -54,8 +61,6 @@ namespace waTallerJhaka.Controllers
             ViewBag.clientes = new SelectList(clienteController.listarClientes(), "ide_cli", "nom_cli");
             return View(obj);
         }
-
-
 
         [HttpGet]
         public IActionResult editarVehiculo(int id)

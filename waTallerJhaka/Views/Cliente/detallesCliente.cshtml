@@ -1,0 +1,53 @@
+﻿@model waTallerJhaka.Models.ClienteO
+
+@{
+    ViewData["Title"] = "detallesCliente";
+    Layout = "~/Views/Shared/LayoutPrincipal.cshtml";
+}
+
+<h1>Detalles del Cliente</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ide_cli)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ide_cli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nom_cli)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nom_cli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ape_cli)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ape_cli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dni_cli)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dni_cli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tel_cli)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tel_cli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dir_cli)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dir_cli)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="listadoClientes">Regresar a la lista</a>
+</div>

@@ -7,7 +7,7 @@ namespace TallerAPI.Repository.DAO
 {
     public class VehiculoDAO : iVehiculo
     {
-        private readonly string? cadena;
+        private readonly string cadena;
         public VehiculoDAO()
         {
             cadena = new ConfigurationBuilder().AddJsonFile("appsettings.json")
@@ -54,7 +54,28 @@ namespace TallerAPI.Repository.DAO
                     mar_veh = dr[1].ToString(),
                     mod_veh = dr[2].ToString(),
                     pla_veh = dr[3].ToString(),
-                    nom_cli = dr[4].ToString()
+                    ide_cli = int.Parse(dr[4].ToString()),
+                    nom_cli = dr[5].ToString()
+                });
+            }
+            cn.Close();
+            return aVehiculos;
+        }
+
+        public IEnumerable<VehiculoBox> listadoVehiculosBox()
+        {
+            List<VehiculoBox> aVehiculos = new List<VehiculoBox>();
+            SqlConnection cn = new SqlConnection(cadena);
+            SqlCommand cmd = new SqlCommand("SP_LISTAVEHICULOBOX", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                aVehiculos.Add(new VehiculoBox()
+                {
+                    IDE_VEH = int.Parse(dr[0].ToString()),
+                    VEH = dr[1].ToString(),
                 });
             }
             cn.Close();

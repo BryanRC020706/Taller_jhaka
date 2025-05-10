@@ -1,0 +1,101 @@
+﻿@model waTallerJhaka.Models.DetalleServicio
+
+@{
+    ViewData["Title"] = "agregarServicio";
+    Layout = "~/Views/Shared/LayoutPrincipal.cshtml";
+    int idCotizacion = ViewBag.IdCotizacion;
+    var detalleServicios = ViewBag.detllaesServicios as List<waTallerJhaka.Models.DetalleServicioLista>;
+}
+
+<hr />
+<div class="form-elements-wrapper justify-content-center">
+    <div class="row">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card-style mb-30">
+                    <form asp-action="agregarServicio">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <h1 class="text-center">AGREGAR SERVICIO</h1>
+                        <br />
+                        <div class="input-style-1">
+                            <label asp-for="IDE_COT" class="control-label"></label>
+                            <input asp-for="IDE_COT" value=@ViewBag.IdCotizacion class="form-control" readonly="readonly" />
+                            <span asp-validation-for="IDE_COT" class="text-danger"></span>
+                        </div>               
+                        <div class="select-style-1">
+                            <div class="select-position">
+                                @Html.DropDownListFor(Model => Model.IDE_SER, (SelectList)ViewBag.servicios, "Seleccione Servicio", new { @class = "select-form" })
+                                <span asp-validation-for="IDE_SER" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="AGREGAR" class="btn btn-primary mx-auto d-block" />
+                        </div>
+                    </form>
+
+                    <br />
+
+                    <div class="row justify-content-center">
+                        <a asp-action="listadoCotizaciones" class="main-btn active-btn rounded-full btn-hover">Regresar al Listado</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+
+
+<hr />
+<div class="tables-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-style mb-30">
+                <h6 class="mb-10">Lista de servicios</h6>
+                <div class="table-wrapper table-responsive">
+                    <table class="table table-bordered" id="tabla">
+                        <thead>
+                            <tr>
+                                <th class="text-center">ID DEL SERVICIO</th>
+                                <th class="text-center">SERVICIO</th>
+                                <th class="text-center">PRECIO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (detalleServicios != null && detalleServicios.Count > 0)
+                            {
+                                foreach (var item in detalleServicios)
+                                {
+                                    <tr>
+                                        <td class="text-center">@item.IDE_SER</td>
+                                        <td class="text-center">@item.NOM_SER</td>
+                                        <td class="text-center">@item.PRE_SER</td>
+                                        <td>
+                                            <form asp-action="eliminarDetalleServicio" method="post">
+                                                <input type="hidden" name="id" value="@item.DET_SER" />
+                                                <input type="hidden" name="idCotizacion" value="@idCotizacion" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr><td colspan="4" class="text-center">No hay servicios agregados</td></tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <select id="rowsPerPage" class="form-select w-auto mb-3">
+                        <option value="5">5 por página</option>
+                        <option value="10">10 por página</option>
+                        <option value="20">20 por página</option>
+                    </select>
+                    <div id="pagination" class="d-flex justify-content-center mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

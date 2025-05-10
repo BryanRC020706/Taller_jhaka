@@ -1,0 +1,108 @@
+﻿@model waTallerJhaka.Models.DetalleRepuesto
+
+@{
+    ViewData["Title"] = "agregarRepuesto";
+    Layout = "~/Views/Shared/LayoutPrincipal.cshtml";
+    int idCotizacion = ViewBag.IdCotizacion;
+    var listaRepuestos = ViewBag.listaRepuestos as List<waTallerJhaka.Models.DetalletRepuestoLista>;
+}
+
+
+<hr />
+<div class="form-elements-wrapper justify-content-center">
+    <div class="row">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card-style mb-30">
+                    <form asp-action="agregarRepuesto">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <h1 class="text-center">AGREGAR REPUESTO</h1>
+                        <br />
+                        <div class="input-style-1">
+                            <label asp-for="IDE_COT" class="control-label"></label>
+                            <input asp-for="IDE_COT" value=@ViewBag.IdCotizacion class="form-control" readonly="readonly" />
+                            <span asp-validation-for="IDE_COT" class="text-danger"></span>
+                        </div>
+                        <div class="select-style-1">
+                            <div class="select-position">
+                                @Html.DropDownListFor(Model => Model.IDE_REP, (SelectList)ViewBag.repuestos, "Seleccione Repuesto", new { @class = "select-form" })
+                                <span asp-validation-for="IDE_REP" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="input-style-1">
+                            <label asp-for="CAN_DET" class="control-label"></label>
+                            <input asp-for="CAN_DET" class="form-control" />
+                            <span asp-validation-for="CAN_DET" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="AGREGAR" class="btn btn-primary mx-auto d-block" />
+                        </div>
+                    </form>
+
+                    <br />
+
+                    <div class="row justify-content-center">
+                        <a asp-action="listadoCotizaciones" class="main-btn active-btn rounded-full btn-hover">Regresar al Listado</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="tables-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-style mb-30">
+                <h6 class="mb-10">Lista de repuestos</h6>
+                <div class="table-wrapper table-responsive">
+                    <table class="table table-striped" id="tabla">
+                        <thead>
+                            <tr>
+                                <th class="text-center">ID DEL REPUESTO</th>
+                                <th class="text-center">REPUESTO</th>
+                                <th class="text-center">CANTIDAD</th>
+                                <th class="text-center">PRECIO</th>
+                                <th class="text-center">SUB TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (listaRepuestos != null && listaRepuestos.Count > 0)
+                            {
+                                foreach (var item in listaRepuestos)
+                                {
+                                    <tr>
+                                        <td class ="text-center">@item.IDE_REP</td>
+                                        <td class="text-center">@item.NOM_REP</td>
+                                        <td class="text-center">@item.CAN_DET</td>
+                                        <td class="text-center">@item.PRE_REP</td>
+                                        <td class="text-center">@item.STO_DET</td>
+                                        <td>
+                                            <form asp-action="eliminarDetalleRepuesto" method="post">
+                                                <input type="hidden" name="id" value="@item.DET_REP" />
+                                                <input type="hidden" name="idCotizacion" value="@idCotizacion" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr><td colspan="5" class="text-center">No hay repuestos agregados</td></tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <select id="rowsPerPage" class="form-select w-auto mb-3">
+                        <option value="5">5 por página</option>
+                        <option value="10">10 por página</option>
+                        <option value="20">20 por página</option>
+                    </select>
+                    <div id="pagination" class="d-flex justify-content-center mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

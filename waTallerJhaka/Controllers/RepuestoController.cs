@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Rotativa.AspNetCore;
 using System.Text;
 using waTallerJhaka.Models;
 
@@ -85,10 +86,22 @@ namespace waTallerJhaka.Controllers
             }
         }
 
+        public IActionResult GenerarPDF()
+        {
+            DateTime hoy = DateTime.Now;
+            return new ViewAsPdf("GenerarPDF", listarRepuestos())
+            {
+                FileName = $"INVENTARIO-{hoy}.pdf",
+                PageOrientation = Rotativa.AspNetCore.Options.Orientation.Portrait,
+                PageSize = Rotativa.AspNetCore.Options.Size.A4
+            };
+        }
+
         public IActionResult listadoRepuesto()
         {
             return View(listarRepuestos());
         }
+
 
         public IActionResult Index()
         {

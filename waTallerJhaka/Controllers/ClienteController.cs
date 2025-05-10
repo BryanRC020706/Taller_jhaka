@@ -17,6 +17,7 @@ namespace waTallerJhaka.Controllers
             httpClient.BaseAddress = dir_ubicacion;
         }
 
+
         public List<Cliente> listarClientes()
         {
             List<Cliente> clientes = new List<Cliente>();
@@ -47,6 +48,19 @@ namespace waTallerJhaka.Controllers
                 ViewBag.mensaje = "Cliente registrado correctamente..!!!";
             }
             return View(obj);
+        }
+
+        [HttpGet]
+        public IActionResult detallesCliente(int id)
+        {
+            ClienteO cliente = new ClienteO();
+            HttpResponseMessage response = httpClient.GetAsync(httpClient.BaseAddress + "/Cliente/buscarCliente/" + id).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var data = response.Content.ReadAsStringAsync().Result;
+                cliente = JsonConvert.DeserializeObject<ClienteO>(data);
+            }
+            return View(cliente);
         }
 
         [HttpGet]

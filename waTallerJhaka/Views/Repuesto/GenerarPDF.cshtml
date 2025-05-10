@@ -1,0 +1,109 @@
+﻿@model IEnumerable<waTallerJhaka.Models.Repuesto>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Reporte de Repuestos</title>
+    <style>
+        .contenedor {
+            width: 800px;
+            height: 842px;
+            margin: auto;
+        }
+
+        body {
+            font-family: Tahoma;
+        }
+
+        #titulo {
+            text-align: center;
+            padding: 10px;
+            font-size: 16pt;
+            color: blue;
+            font-weight: bold;
+        }
+
+        #fechahora {
+            text-align: right;
+            font-size: 10pt;
+        }
+
+        table.tbRepuesto {
+            border-collapse: separate;
+            border-spacing: 5px;
+            width: 100%;
+        }
+
+            table.tbRepuesto thead tr th {
+                background-color: lightblue;
+                padding: 10px;
+                font-size: 10pt;
+                color: white;
+                text-align: center;
+            }
+
+            table.tbRepuesto tbody tr td {
+                padding: 5px;
+                font-size: 10pt;
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div>
+            <hr width="100%" color="blue">
+            <table style="width:100%">
+                <tr>
+                    <td style="width: 20%;">
+                        <img style="width:100px; height:80px" src="../logo.png" />
+                    </td>
+                    <td style="width: 60%;">
+                        <p id="titulo">
+                            SISTEMA DE TALLER AUTOMOTRIZ <br />
+                            Reporte de Repuestos
+                        </p>
+                    </td>
+                    <td style="width: 20%;">
+                        <p id="fechahora">
+                            @DateTime.Now.ToShortDateString()<br />
+                            @DateTime.Now.ToString("HH:mm:ss")
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <hr width="100%" color="blue">
+        </div>
+
+        <div>
+            <table class="tbRepuesto">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.First().ide_rep)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().nom_rep)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().sto_rep)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().pre_rep)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ide_rep</td>
+                            <td>@item.nom_rep</td>
+                            <td>@item.sto_rep UND.</td>
+                            <td>S/. @item.pre_rep</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <hr width="100%" color="blue">
+        </div>
+    </div>
+</body>
+</html>

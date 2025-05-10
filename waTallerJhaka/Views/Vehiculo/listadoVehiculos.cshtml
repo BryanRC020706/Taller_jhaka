@@ -49,11 +49,10 @@
                                             @Html.DisplayFor(modelItem => item.pla_veh)
                                         </td>
                                         <td>
-                                           <a href="#">@Html.DisplayFor(modelItem => item.nom_cli)</a> 
-                                        </td>
+                                        <a href="@Url.ActionLink("detallesCliente","Cliente",new { id = item.ide_cli } )">@Html.DisplayFor(modelItem => item.nom_cli)</a>
+                                    </td>
                                         <td>
                                             @Html.ActionLink("Editar", "editarVehiculo", new { id = item.ide_veh }) |
-                                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
                                         </td>
                                     </tr>
                                 }

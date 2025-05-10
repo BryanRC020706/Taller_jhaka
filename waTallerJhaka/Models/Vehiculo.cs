@@ -12,6 +12,7 @@ namespace waTallerJhaka.Models
         public string mod_veh { get; set; }
         [DisplayName("PLACA")]
         public string pla_veh { get; set; }
+        public int ide_cli { get; set; }
         [DisplayName("DUEÑO")]
         public string nom_cli { get; set; }
     }

@@ -197,6 +197,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\lead\\lead-6.png"
     },
     {
+      "Id": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo.png"
+    },
+    {
       "Id": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\assets\\images\\logo\\logo-2.svg",
       "PackagePath": "staticwebassets\\assets\\images\\logo\\logo-2.svg"
     },
@@ -635,6 +639,10 @@
     {
       "Id": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\angelo\\SERVICIOS WEB\\PROYECTO\\Taller_jhaka\\waTallerJhaka\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.waTallerJhaka.props",

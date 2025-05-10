@@ -58,6 +58,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvblxudWV2YUNvdGl6YWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Factura/detallesFactura.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYVxkZXRhbGxlc0ZhY3R1cmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Factura/GenerarPdfFactura.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYVxHZW5lcmFyUGRmRmFjdHVyYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Factura/listadoFacturas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYVxsaXN0YWRvRmFjdHVyYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Factura/nuevaFactura.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYVxudWV2YUZhY3R1cmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/angelo/SERVICIOS WEB/PROYECTO/Taller_jhaka/waTallerJhaka/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

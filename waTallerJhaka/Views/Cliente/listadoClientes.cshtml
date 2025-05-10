@@ -14,25 +14,25 @@
                     <table id="tabla" class="table">
                         <thead>
                             <tr>
-                                <th>@Html.DisplayNameFor(model => model.ide_cli)</th>
-                                <th>@Html.DisplayNameFor(model => model.nom_cli)</th>
-                                <th>@Html.DisplayNameFor(model => model.dni_cli)</th>
-                                <th>@Html.DisplayNameFor(model => model.tel_cli)</th>
-                                <th>@Html.DisplayNameFor(model => model.dir_cli)</th>
-                                <th>Acciones</th>
+                                <th class="text-center">@Html.DisplayNameFor(model => model.ide_cli)</th>
+                                <th class="text-center">@Html.DisplayNameFor(model => model.nom_cli)</th>
+                                <th class="text-center">@Html.DisplayNameFor(model => model.dni_cli)</th>
+                                <th class="text-center">@Html.DisplayNameFor(model => model.tel_cli)</th>
+                                <th class="text-center">@Html.DisplayNameFor(model => model.dir_cli)</th>
+                                <th class ="text-center">ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td>@Html.DisplayFor(modelItem => item.ide_cli)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.nom_cli)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.dni_cli)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.tel_cli)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.dir_cli)</td>
-                                    <td>
-                                        @Html.ActionLink("Editar", "editarCliente", new { id = item.ide_cli }) |
+                                    <td class="text-center">@Html.DisplayFor(modelItem => item.ide_cli)</td>
+                                    <td class="text-center">@Html.DisplayFor(modelItem => item.nom_cli)</td>
+                                    <td class="text-center">@Html.DisplayFor(modelItem => item.dni_cli)</td>
+                                    <td class="text-center">@Html.DisplayFor(modelItem => item.tel_cli)</td>
+                                    <td class="text-center">@Html.DisplayFor(modelItem => item.dir_cli)</td>
+                                    <td class="text-center">
+                                        @Html.ActionLink("Editar", "editarCliente", new { id = item.ide_cli }, new { @class = "btn btn-info" }) 
                                     </td>
                                 </tr>
                             }

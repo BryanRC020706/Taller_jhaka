@@ -1,0 +1,130 @@
+﻿@model waTallerJhaka.Models.Factura
+@{
+    Layout = null;
+    var listaRepuestos = ViewBag.listaRepuestos as List<waTallerJhaka.Models.DetalletRepuestoLista>;
+    var detalleServicios = ViewBag.listaServicios as List<waTallerJhaka.Models.DetalleServicioLista>;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Factura PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+
+        .details, .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+            .details td, .table th, .table td {
+                border: 1px solid #000;
+                padding: 8px;
+                text-align: center;
+            }
+
+            .table th {
+                background-color: #eee;
+            }
+
+        .totales {
+            font-weight: bold;
+            font-size: 12pt;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SISTEMA DE GESTIÓN DE TALLER</h1>
+    <h2>FACTURA</h2>
+    <hr />
+
+    <table class="details">
+        <tr>
+            <td><strong>ID FACTURA:</strong></td>
+            <td>@Model.ide_fac</td>
+            <td><strong>ID COTIZACIÓN:</strong></td>
+            <td>@Model.ide_cot</td>
+        </tr>
+        <tr>
+            <td><strong>FECHA:</strong></td>
+            <td colspan="3">@Model.fec_fac.ToString("dd/MM/yyyy")</td>
+        </tr>
+        <tr>
+            <td class="totales" colspan="4">TOTAL FACTURA: S/. @Model.tot_fac</td>
+        </tr>
+    </table>
+
+    <h3>Lista de Repuestos</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID DEL REPUESTO</th>
+                <th>REPUESTO</th>
+                <th>CANTIDAD</th>
+                <th>PRECIO</th>
+                <th>SUB TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (listaRepuestos != null && listaRepuestos.Count > 0)
+            {
+                foreach (var item in listaRepuestos)
+                {
+                    <tr>
+                        <td>@item.IDE_REP</td>
+                        <td>@item.NOM_REP</td>
+                        <td>@item.CAN_DET</td>
+                        <td>S/.@item.PRE_REP</td>
+                        <td>S/.@item.STO_DET</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="5">No hay repuestos agregados</td></tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Lista de Servicios</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID DEL SERVICIO</th>
+                <th>SERVICIO</th>
+                <th>PRECIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (detalleServicios != null && detalleServicios.Count > 0)
+            {
+                foreach (var item in detalleServicios)
+                {
+                    <tr>
+                        <td>@item.IDE_SER</td>
+                        <td>@item.NOM_SER</td>
+                        <td>S/.@item.PRE_SER</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="3">No hay servicios agregados</td></tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -18,40 +18,39 @@
                     <table id="tabla" class="table">
                         <thead>
                             <tr>
-                                <th>
+                                <th class="text-center">
                                     @Html.DisplayNameFor(model => model.ide_rep)
                                 </th>
-                                <th>
+                                <th class="text-center">
                                     @Html.DisplayNameFor(model => model.nom_rep)
                                 </th>
-                                <th>
+                                <th class ="text-center">
                                     @Html.DisplayNameFor(model => model.sto_rep)
                                 </th>
-                                <th>
+                                <th class="text-center">
                                     @Html.DisplayNameFor(model => model.pre_rep)
                                 </th>
-                                <th></th>
+                                <th class="text-center">ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td>
+                                    <td class="text-center">
                                         @Html.DisplayFor(modelItem => item.ide_rep)
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @Html.DisplayFor(modelItem => item.nom_rep)
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @Html.DisplayFor(modelItem => item.sto_rep) UND.
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         S/. @Html.DisplayFor(modelItem => item.pre_rep)
                                     </td>
-                                    <td>
-                                        @Html.ActionLink("Editar", "editarRepuesto", new { id = item.ide_rep }) |
-                                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                    <td class="text-center">
+                                        @Html.ActionLink("Editar", "editarRepuesto", new { id = item.ide_rep }, new { @class = "btn btn-info" }) 
                                     </td>
                                 </tr>
                             }

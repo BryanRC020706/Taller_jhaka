@@ -1,0 +1,142 @@
+﻿ @model waTallerJhaka.Models.Factura
+
+@{
+    ViewData["Title"] = "detallesFactura";
+    Layout = "~/Views/Shared/LayoutPrincipal.cshtml";
+    var listaRepuestos = ViewBag.listaRepuestos as List<waTallerJhaka.Models.DetalletRepuestoLista>;
+    var detalleServicios = ViewBag.listaServicios as List<waTallerJhaka.Models.DetalleServicioLista>;
+}
+<hr />
+<p>
+    <a asp-action="GenerarPdfFactura" class="btn btn-primary">Generar Factura.PDF</a>
+</p>
+<hr />
+
+<h1>DETALLES DE FACTURA</h1>
+
+<div>
+    <h4>Factura</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ide_fac)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ide_fac)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ide_cot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ide_cot)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fec_fac)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fec_fac)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tot_fac)
+        </dt>
+        <dd class = "col-sm-10">
+            S/.@Html.DisplayFor(model => model.tot_fac)
+        </dd>
+    </dl>
+</div>
+<hr />
+<div class="tables-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-style mb-30">
+                <h6 class="mb-10">Lista de repuestos</h6>
+                <div class="table-wrapper table-responsive">
+                    <table class="table table-striped" id="tabla">
+                        <thead>
+                            <tr>
+                                <th class="text-center">ID DEL REPUESTO</th>
+                                <th class="text-center">REPUESTO</th>
+                                <th class="text-center">CANTIDAD</th>
+                                <th class="text-center">PRECIO</th>
+                                <th class="text-center">SUB TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (listaRepuestos != null && listaRepuestos.Count > 0)
+                            {
+                                foreach (var item in listaRepuestos)
+                                {
+                                    <tr>
+                                        <td class="text-center">@item.IDE_REP</td>
+                                        <td class="text-center">@item.NOM_REP</td>
+                                        <td class="text-center">@item.CAN_DET</td>
+                                        <td class="text-center">@item.PRE_REP</td>
+                                        <td class="text-center">S/.@item.STO_DET</td>        
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr><td colspan="5" class="text-center">No hay repuestos agregados</td></tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <select id="rowsPerPage" class="form-select w-auto mb-3">
+                        <option value="5">5 por página</option>
+                        <option value="10">10 por página</option>
+                        <option value="20">20 por página</option>
+                    </select>
+                    <div id="pagination" class="d-flex justify-content-center mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="tables-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-style mb-30">
+                <h6 class="mb-10">Lista de servicios</h6>
+                <div class="table-wrapper table-responsive">
+                    <table class="table table-bordered" id="tabla">
+                        <thead>
+                            <tr>
+                                <th class="text-center">ID DEL SERVICIO</th>
+                                <th class="text-center">SERVICIO</th>
+                                <th class="text-center">PRECIO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (detalleServicios != null && detalleServicios.Count > 0)
+                            {
+                                foreach (var item in detalleServicios)
+                                {
+                                    <tr>
+                                        <td class="text-center">@item.IDE_SER</td>
+                                        <td class="text-center">@item.NOM_SER</td>
+                                        <td class="text-center">S/.@item.PRE_SER</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr><td colspan="4" class="text-center">No hay servicios agregados</td></tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <select id="rowsPerPage" class="form-select w-auto mb-3">
+                        <option value="5">5 por página</option>
+                        <option value="10">10 por página</option>
+                        <option value="20">20 por página</option>
+                    </select>
+                    <div id="pagination" class="d-flex justify-content-center mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,41 +16,41 @@
                         
                         <thead>
                             <tr>
-                                <th>
+                                <th class="text-center">
                                     @Html.DisplayNameFor(model => model.ide_cot)
                                 </th>
-                                <th>
+                                <th class="text-center">
                                     @Html.DisplayNameFor(model => model.fec_cot)
                                 </th>
-                                <th>
+                                <th class="text-center">
                                     @Html.DisplayNameFor(model => model.nom_veh)
                                 </th>
-                                <th>
+                                <th class="text-center">
                                     @Html.DisplayNameFor(model => model.nom_cli)
                                 </th>
-                                <th></th>
+                                <th class="text-center">ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td>
+                                    <td class="text-center">
                                         @Html.DisplayFor(modelItem => item.ide_cot)
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @Html.DisplayFor(modelItem => item.fec_cot)
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @Html.DisplayFor(modelItem => item.nom_veh)
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @Html.DisplayFor(modelItem => item.nom_cli)
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @Html.ActionLink("Agregar Repuestos", "agregarRepuesto", new { id = item.ide_cot }, new { @class="btn btn-info"} ) |
                                         @Html.ActionLink("Agregar Servicios", "agregarServicio", new { id = item.ide_cot }, new { @class = "btn btn-info" }) |
-                                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-dark" }) |
+                                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-dark" }) 
                                     </td>
                                 </tr>
                             }

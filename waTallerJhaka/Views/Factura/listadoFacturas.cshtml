@@ -1,35 +1,33 @@
-﻿@model IEnumerable<waTallerJhaka.Models.Vehiculo>
+﻿@model IEnumerable<waTallerJhaka.Models.Factura>
 
 @{
-    ViewData["Title"] = "listadoVehiculos";
+    ViewData["Title"] = "listadoFacturas";
     Layout = "~/Views/Shared/LayoutPrincipal.cshtml";
 }
+
 <hr />
 <div class="tables-wrapper">
     <div class="row">
         <div class="col-lg-12">
             <div class="card-style mb-30">
-                <h6 class="mb-10">Lista de Vehiculos</h6>
+                <h6 class="mb-10">Lista de Facturas</h6>
                 <div class="table-wrapper table-responsive">
                     <table id="tabla" class="table">
                             <thead>
                                 <tr>
                                     <th class="text-center">
-                                        @Html.DisplayNameFor(model => model.ide_veh)
+                                        @Html.DisplayNameFor(model => model.ide_fac)
+                                    </th>
+                                    <th class ="text-center">
+                                        @Html.DisplayNameFor(model => model.ide_cot)
                                     </th>
                                     <th class="text-center">
-                                        @Html.DisplayNameFor(model => model.mar_veh)
+                                        @Html.DisplayNameFor(model => model.fec_fac)
                                     </th>
                                     <th class="text-center">
-                                        @Html.DisplayNameFor(model => model.mod_veh)
+                                        @Html.DisplayNameFor(model => model.tot_fac)
                                     </th>
-                                    <th class="text-center">
-                                        @Html.DisplayNameFor(model => model.pla_veh)
-                                    </th>
-                                    <th class="text-center">
-                                        @Html.DisplayNameFor(model => model.nom_cli)
-                                    </th>
-                                    <th class="text-center">ACCIONES</th>
+                                    <th class ="text-center">ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,23 +35,20 @@
                                 {
                                     <tr>
                                         <td class="text-center">
-                                            @Html.DisplayFor(modelItem => item.ide_veh)
+                                            @Html.DisplayFor(modelItem => item.ide_fac)
                                         </td>
                                         <td class="text-center">
-                                            @Html.DisplayFor(modelItem => item.mar_veh)
+                                            @Html.DisplayFor(modelItem => item.ide_cot)
                                         </td>
                                         <td class="text-center">
-                                            @Html.DisplayFor(modelItem => item.mod_veh)
+                                            @Html.DisplayFor(modelItem => item.fec_fac)
                                         </td>
                                         <td class="text-center">
-                                            @Html.DisplayFor(modelItem => item.pla_veh)
+                                            @Html.DisplayFor(modelItem => item.tot_fac)
                                         </td>
                                         <td class="text-center">
-                                        <a href="@Url.ActionLink("detallesCliente","Cliente",new { id = item.ide_cli })">@Html.DisplayFor(modelItem => item.nom_cli)</a>
-                                        </td>
-                                        <td class="text-center">
-                                            @Html.ActionLink("Editar", "editarVehiculo", new { id = item.ide_veh }, new { @class="btn btn-info"}) 
-                                        </td>
+                                        @Html.ActionLink("Detalles", "detallesFactura", new { id = item.ide_fac }, new { @class = "btn btn-info" })
+                                    </td>
                                     </tr>
                                 }
                             </tbody>

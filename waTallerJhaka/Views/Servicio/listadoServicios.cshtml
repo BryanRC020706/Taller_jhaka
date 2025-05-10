@@ -14,34 +14,33 @@
                     <table id="tabla" class="table">
                             <thead>
                                 <tr>
-                                    <th>
+                                    <th class="text-center">
                                         @Html.DisplayNameFor(model => model.ide_ser)
                                     </th>
-                                    <th>
+                                    <th class="text-center">
                                         @Html.DisplayNameFor(model => model.nom_ser)
                                     </th>
-                                    <th>
+                                    <th class="text-center">
                                         @Html.DisplayNameFor(model => model.pre_ser)
                                     </th>
-                                    <th></th>
+                                    <th class="text-center">ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                        <td>
+                                        <td class="text-center">
                                             @Html.DisplayFor(modelItem => item.ide_ser)
                                         </td>
-                                        <td>
+                                        <td class="text-center">
                                             @Html.DisplayFor(modelItem => item.nom_ser)
                                         </td>
-                                        <td>
+                                        <td class="text-center">
                                             S/. @Html.DisplayFor(modelItem => item.pre_ser)
                                         </td>
-                                        <td>
-                                            @Html.ActionLink("Editar", "editarServicio", new { id = item.ide_ser }) |
-                                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                        <td class="text-center">
+                                            @Html.ActionLink("Editar", "editarServicio", new { id = item.ide_ser }, new { @class = "btn btn-info" }) 
                                         </td>
                                     </tr>
                                 }

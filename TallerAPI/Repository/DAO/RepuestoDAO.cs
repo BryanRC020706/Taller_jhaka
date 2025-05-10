@@ -104,7 +104,7 @@ namespace TallerAPI.Repository.DAO
             }
             catch (Exception ex)
             {
-                mensaje = "Error al actualizar " + ex.Message;
+                mensaje = "Error al registrar " + ex.Message;
             }
             cn.Close();
             return mensaje;
